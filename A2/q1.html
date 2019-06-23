@@ -1,0 +1,88 @@
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  
+  <body>
+      <title>
+            Florence Nightingale's Polar chart
+      </title>
+      <br>
+      <h2>
+            Diagram of the Causes of Mortality in the Army in The East
+      </h2>
+    <div id="myDiv" style="width: 480px; height: 400px;"></div>
+    <br>
+    <div id="myDiv2" style="width: 480px; height: 400px;"></div>
+    <script>
+var trace1 = {
+  r: [0.667558118, 1.404820734, 1.22313387, 6.909882989, 10.22569301, 9.968768553, 7.918778162, 10.41231709, 14.17789452, 18.04348502, 16.1834908, 12.3646366],
+  t: ['Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar'],
+  name: 'Zymotic diseases',
+  marker: {color: 'Yellow'},
+  type: 'area'
+};
+
+var trace2 = {
+  r: [1.49270533, 1.210051849, 0.892062058, 1.748077489, 1.946249636, 2.969374319, 3.993410234, 3.691024672, 3.908820095, 6.180387232, 6.677964889, 4.672906825],
+  t: ['Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar'],
+  name: 'Other causes',
+  marker: {color: 'Green'},
+  type: 'area'
+};
+
+var trace3 = {
+  r: [0, 0, 0, 0, 0.356824823, 3.196521132, 4.056676117, 6.071267151, 3.643284542, 3.126037989, 2.277817189, 2.018506018],
+  t: ['Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar'],
+  name: 'Wounds & injuries',
+  marker: {color: 'Red'},
+  type: 'area'
+};
+
+var trace4 = {
+  r: [7.516648508, 7.394973864, 8.87769834, 5.849642106, 6.430276372, 3.888408363, 3.231186201, 4.237060016, 2.837823131, 1.90492328, 1.449429284, 1.114185153],
+  t: ['Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar'],
+  name: 'Zymotic diseases',
+  marker: {color: 'Yellow'},
+  type: 'area'
+};
+
+var trace5 = {
+  r: [2.386995384, 2.298683125, 4.531113291, 3.46414242, 3.746660644, 4.700075117, 2.080628379, 1.828183198, 1.261566261, 0.39894228, 0, 0],
+  t: ['Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar'],
+  name: 'Other causes',
+  marker: {color: 'Green'},
+  type: 'area'
+};
+
+var trace6 = {
+  r: [2.597723924, 1.994711402, 1.748077489, 1.720546989, 1.460368528, 1.261566261, 1.210051849, 1.793022546, 1.575695755, 2.034214473, 1.286550197, 1.701945935],
+  t: ['Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar'],
+  name: 'Wounds & injuries',
+  marker: {color: 'Red'},
+  type: 'area'
+};
+
+var data = [trace1, trace2, trace3];
+var data2 = [trace4, trace5, trace6];
+
+var layout = {
+  title: 'April 1854 to March 1855',
+  font: {size: 16},
+  legend: {font: {size: 16}},
+  radialaxis: {ticksuffix: ''},
+  orientation: 180
+};
+
+var layout2 = {
+  title: 'April 1855 to March 1856',
+  font: {size: 16},
+  legend: {font: {size: 16}},
+  radialaxis: {ticksuffix: ''},
+  orientation: 180
+};
+
+Plotly.newPlot('myDiv', data, layout, {showSendToCloud: true});
+Plotly.newPlot('myDiv2', data2, layout2, {showSendToCloud: true});
+</script>
+  </body>

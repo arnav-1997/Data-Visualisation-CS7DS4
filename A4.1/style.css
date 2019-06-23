@@ -1,0 +1,75 @@
+html {
+  min-height: 100vh;
+}
+body {
+  min-height: 100vh;
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.chart-container {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.infobox {
+  position: absolute;
+  top: 25%;
+  right: 3%;
+  height: 63%;
+  width: 67%;
+  opacity: 0;
+}
+
+.infobox__content {
+  overflow-y: scroll;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.infobox__fade {
+  position: absolute;
+  background: black;
+  height: 10%;
+  width: 100%;
+}
+
+.infobox__fade--top {
+  top: 0;
+  background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+.infobox__fade--bottom {
+  bottom: 0;
+  background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+  height: 10%;
+}
+
+.legend {
+  width: 85%;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.btn-group-sm > .btn {
+  font-size: .7rem;
+}
+
+
+.bar:hover {
+  cursor: pointer;
+}
+
+.disabled {
+  pointer-events: none;
+}
